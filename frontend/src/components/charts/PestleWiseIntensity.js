@@ -19,9 +19,9 @@ const PestleWiseIntensity = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold mb-4">Pestle Wise Intensity</h1>
-      <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+    <div className="p-5 m-5 border border-gray-300 flex flex-col justify-center items-center">
+      <h1 className="text-3xl font-bold">Pestle Wise Intensity</h1>
+      <div>
         <BarChart
           xAxis={[{ scaleType: "band", data: pestleCategories }]}
           series={[{ data: newData }]}
