@@ -53,7 +53,7 @@ const InsightsByYear = ({ data }) => {
   };
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col">
+    <div className="p-5 m-5  flex flex-col">
       <h1 className="text-3xl font-bold mb-5">Count of Insights by Year</h1>
       <div className="flex justify-between items-center mb-5">
         <label htmlFor="yearFilter" className="mr-3">

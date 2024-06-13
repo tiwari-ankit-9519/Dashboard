@@ -27,7 +27,7 @@ const CountryWiseIntensity = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col justify-center items-start">
+    <div className="p-5 m-5  flex flex-col justify-center items-start">
       <div className="w-full flex justify-between items-center mb-5">
         <h1 className="text-3xl font-bold">Country Wise Intensity</h1>
         <FormControl className="w-1/3">
@@ -49,7 +49,7 @@ const CountryWiseIntensity = ({ data }) => {
         <SparkLineChart
           data={newData}
           width={600}
-          height={100}
+          height={300}
           className="animate-fade-in"
           title="Country Wise Intensity"
         />

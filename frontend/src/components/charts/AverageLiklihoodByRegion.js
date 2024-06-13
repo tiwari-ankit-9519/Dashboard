@@ -48,15 +48,18 @@ const AverageLikelihoodByRegion = ({ data }) => {
   }, [selectedRegion, data]);
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col justify-center items-center">
-      <div className="w-full flex justify-between items-center mb-5">
-        <h1 className="text-3xl font-bold">Average Likelihood by Region</h1>
-        <FormControl className="w-1/3">
+    <div>
+      <div className="w-full flex flex-col md:flex-row justify-between items-center mb-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-0 text-center md:text-left">
+          Average Likelihood by Region
+        </h2>
+        <FormControl className="w-full md:w-1/3">
           <InputLabel id="region-select-label">Region</InputLabel>
           <Select
             labelId="region-select-label"
             value={selectedRegion}
             onChange={handleRegionChange}
+            className="bg-white"
           >
             {regions.map((region) => (
               <MenuItem key={region} value={region}>
@@ -66,33 +69,35 @@ const AverageLikelihoodByRegion = ({ data }) => {
           </Select>
         </FormControl>
       </div>
-      <div>
-        <BarChart
-          xAxis={[
-            {
-              scaleType: "band",
-              data: displayedRegions,
-              label: "Region",
-            },
-          ]}
-          yAxis={[{ label: "Likelihood" }]}
-          series={[
-            {
-              data: newData,
-              color: "cornflowerblue",
-            },
-          ]}
-          width={600}
-          height={300}
-          className="animate-fade-in"
-          borderRadius={15}
-          tooltip={{
-            enabled: true,
-            formatter: (tooltip) => {
-              return `${tooltip.value.toFixed(2)}`;
-            },
-          }}
-        />
+      <div className="w-full overflow-x-auto">
+        <div className="w-full min-w-[600px]">
+          <BarChart
+            xAxis={[
+              {
+                scaleType: "band",
+                data: displayedRegions,
+                label: "Region",
+              },
+            ]}
+            yAxis={[{ label: "Likelihood" }]}
+            series={[
+              {
+                data: newData,
+                color: "#6366f1",
+              },
+            ]}
+            width={600}
+            height={300}
+            className="animate-fade-in"
+            borderRadius={15}
+            tooltip={{
+              enabled: true,
+              formatter: (tooltip) => {
+                return `${tooltip.value.toFixed(2)}`;
+              },
+            }}
+          />
+        </div>
       </div>
     </div>
   );

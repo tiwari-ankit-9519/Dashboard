@@ -40,7 +40,7 @@ const LikelihoodWiseIntensity = ({ data }) => {
   };
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col">
+    <div className="p-5 m-5  flex flex-col">
       <h1 className="text-3xl font-bold mb-5">Likelihood Wise Intensity</h1>
       <div className="flex justify-between items-center mb-5">
         <label htmlFor="likelihoodFilter" className="mr-3">

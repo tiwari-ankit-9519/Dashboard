@@ -39,7 +39,7 @@ const CountryWiseOccurrences = ({ data }) => {
   }, [selectedCountry, data]);
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col items-start">
+    <div className="p-5 m-5 flex flex-col items-start">
       <div className="w-full flex justify-between items-center mb-5">
         <h1 className="text-3xl font-bold">Country Wise Occurrence</h1>
         <FormControl className="w-1/3">
@@ -59,9 +59,11 @@ const CountryWiseOccurrences = ({ data }) => {
       </div>
       <div className="w-full flex justify-center">
         <BarChart
-          yAxis={[{ scaleType: "band", data: displayedCountries }]}
-          series={[{ data: newData }]}
-          layout="horizontal"
+          xAxis={[
+            { scaleType: "band", data: displayedCountries, label: "Country" },
+          ]}
+          yAxis={[{ label: "Occurrences" }]}
+          series={[{ data: newData, color: "#6366f1" }]}
           width={600}
           height={300}
           className="animate-fade-in"

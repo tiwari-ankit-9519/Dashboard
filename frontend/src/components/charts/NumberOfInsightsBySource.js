@@ -118,7 +118,7 @@ const InsightsBySource = ({ data }) => {
   };
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col">
+    <div className="p-5 m-5  flex flex-col">
       <h1 className="text-3xl font-bold mb-5">Number of Insights by Source</h1>
       <div className="flex justify-between items-center mb-5">
         <label htmlFor="sourceFilter" className="mr-3">

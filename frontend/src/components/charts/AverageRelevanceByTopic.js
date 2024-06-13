@@ -48,7 +48,7 @@ const AverageRelevanceByTopic = ({ data }) => {
   }, [selectedTopic, data]);
 
   return (
-    <div className="p-5 m-5 border border-gray-300 flex flex-col justify-center items-center">
+    <div className="p-5 m-5flex flex-col justify-center items-center">
       <div className="w-full flex justify-between items-center mb-5">
         <h1 className="text-3xl font-bold">Average Relevance by Topic</h1>
         <FormControl className="w-1/3">
