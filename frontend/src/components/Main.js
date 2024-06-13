@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./UI/Header";
 import AverageLikelihoodByRegion from "./charts/AverageLiklihoodByRegion";
 import AverageRelevanceByTopic from "../components/charts/AverageRelevanceByTopic";
 import CountryWiseIntensity from "./charts/CountryWiseIntensity";
@@ -105,6 +106,7 @@ export default function Main({ data }) {
         </nav>
       </aside>
       <main className="flex-1 p-5">
+        <Header />
         <h1 className="text-4xl font-bold text-center mb-10 animate-fade-in">
           Dashboard Overview
         </h1>
